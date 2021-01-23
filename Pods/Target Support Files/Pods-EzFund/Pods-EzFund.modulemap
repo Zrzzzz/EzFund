@@ -1,0 +1,6 @@
+framework module Pods_EzFund {
+  umbrella header "Pods-EzFund-umbrella.h"
+
+  export *
+  module * { export * }
+}
