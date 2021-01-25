@@ -70,25 +70,28 @@ class PopoverViewController: NSViewController {
     
     private func refreshFundData() {
         fundData = []
-        for fundcode in Storage.fundcodes {
-            let url = URL(string: "http://fundgz.1234567.com.cn/js/\(fundcode).js")!
+        let localFunds = Storage.retreive(LocalFileName.fund, from: .documents, as: LocalFund.self)?.fundData ?? []
+        for localFund in localFunds {
+            let url = URL(string: "http://fundgz.1234567.com.cn/js/\(localFund[0]).js")!
             AF.request(url).response { (response) in
                 //                print(response.response?.statusCode)
                 switch response.result {
                 case .success(let data):
                     if let data = data {
-                        var jsonStr = String(data: data, encoding: .utf8) ?? ""
-                        jsonStr = jsonStr.find("jsonpgz\\((.+)\\);")
-                        let jsonData = jsonStr.data(using: .utf8)
-                        let fund = try? JSONDecoder().decode(Fund.self, from: jsonData ?? Data())
-                        if let fund = fund {
-                            self.fundData.append(fund)
+                        let jsonStr = String(data: data, encoding: .utf8)
+                        if var jsStr = jsonStr {
+                            jsStr = jsStr.find("jsonpgz\\((.+)\\);")
+                            let jsonData = jsStr.data(using: .utf8)
+                            let fund = try? JSONDecoder().decode(Fund.self, from: jsonData ?? Data())
+                            if let fund = fund {
+                                self.fundData.append(fund)
+                            }
+                        } else {
+                            self.fundData.append(Fund(fundcode: localFund[0], name: localFund[2], jzrq: "", dwjz: "无查询结果", gsz: "", gszzl: "", gztime: ""))
                         }
                     }
                 case .failure(let err):
                     SLogError("failed to get fund data.\n \(err)")
-                    
-                    
                 }
             }
         }
@@ -103,6 +106,8 @@ class PopoverViewController: NSViewController {
                 if let data = data {
                     let market = try? JSONDecoder().decode(Market.self, from: data)
                     self.marketData = market?.data.diff ?? []
+                    // NO need anymore
+//                    Storage.store(self.marketData, in: .documents, as: LocalFileName.market)
                 }
             case .failure(let err):
                 SLogError("failed to get Market Data.\n \(err)")
@@ -124,7 +129,7 @@ extension PopoverViewController: NSTableViewDelegate, NSTableViewDataSource {
         if tableView == fundTableView {
             var text = ""
             var id = CellIdentifiers.fundName
-            let color: NSColor = (Double(fundData[row].gszzl) ?? 0) > 0 ? NSColor.red : NSColor.hex(0x1a6840)
+            let color: NSColor = (Double(fundData[row].gszzl) ?? 0) > 0 ? NSColor.hex(0xc21f30) : NSColor.hex(0x1a6840)
             let attributedString: (String) -> NSAttributedString = {(s: String) in
                 return NSAttributedString(string: s,
                                           attributes: [
@@ -159,7 +164,7 @@ extension PopoverViewController: NSTableViewDelegate, NSTableViewDataSource {
             var text = ""
             var id = CellIdentifiers.marketName
             let market = marketData[row]
-            let color: NSColor = market.f3 > 0 ? .red : NSColor.hex(0x1a6840)
+            let color: NSColor = market.f3 > 0 ? .hex(0xc21f30) : NSColor.hex(0x1a6840)
             let attributedString: (String) -> NSAttributedString = {(s: String) in
                 return NSAttributedString(string: s,
                                           attributes: [

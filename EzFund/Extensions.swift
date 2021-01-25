@@ -79,8 +79,6 @@ extension NSColor {
         let r = (h >> 16) & 0x0000ff
         let g = (h >> 8) & 0x0000ff
         let b = (h) & 0x0000ff
-        slogLevel = .Info
-        SLogInfo("\(r) \(g) \(b)")
         return NSColor(srgbRed: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: 1.0)
     }
 }
@@ -89,4 +87,7 @@ extension CGColor {
     static let environment = NSColor.environment.cgColor
 }
 
+extension NSPasteboard.PasteboardType {
+    static let rowDragType = NSPasteboard.PasteboardType(rawValue: "com.EzFund.c")
+}
 

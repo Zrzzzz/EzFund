@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DA8A76A7E8C1300DD2C7A8A /* Pods_EzFund.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244A951C49F76904BE66EBB /* Pods_EzFund.framework */; };
+		D3B8D14625BDCBFF0070D1BC /* BoardViewController+DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8D14525BDCBFF0070D1BC /* BoardViewController+DragDrop.swift */; };
 		D3E83B3325BA708A00CC3AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E83B3225BA708A00CC3AE7 /* AppDelegate.swift */; };
 		D3E83B3725BA708C00CC3AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E83B3625BA708C00CC3AE7 /* Assets.xcassets */; };
 		D3E83B3A25BA708C00CC3AE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E83B3925BA708C00CC3AE7 /* Preview Assets.xcassets */; };
@@ -18,11 +19,15 @@
 		D3E83B5625BAB8FF00CC3AE7 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E83B5525BAB8FF00CC3AE7 /* Storage.swift */; };
 		D3E83B5A25BB378400CC3AE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E83B5925BB378400CC3AE7 /* Extensions.swift */; };
 		D3E83B5D25BBF31600CC3AE7 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E83B5C25BBF31500CC3AE7 /* Logging.swift */; };
+		D3E83B9625BC6D0E00CC3AE7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E83B9525BC6D0E00CC3AE7 /* SearchBar.swift */; };
+		D3E83B9925BC730E00CC3AE7 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E83B9825BC730E00CC3AE7 /* BoardViewController.swift */; };
+		D3E83BA325BD823E00CC3AE7 /* DataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E83BA225BD823E00CC3AE7 /* DataStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5140FC12E63944816A6DC60E /* Pods-EzFund.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EzFund.release.xcconfig"; path = "Target Support Files/Pods-EzFund/Pods-EzFund.release.xcconfig"; sourceTree = "<group>"; };
 		7244A951C49F76904BE66EBB /* Pods_EzFund.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EzFund.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B8D14525BDCBFF0070D1BC /* BoardViewController+DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardViewController+DragDrop.swift"; sourceTree = "<group>"; };
 		D3E83B2F25BA708A00CC3AE7 /* EzFund.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzFund.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E83B3225BA708A00CC3AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E83B3625BA708C00CC3AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		D3E83B5525BAB8FF00CC3AE7 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		D3E83B5925BB378400CC3AE7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D3E83B5C25BBF31500CC3AE7 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		D3E83B9525BC6D0E00CC3AE7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		D3E83B9825BC730E00CC3AE7 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		D3E83BA225BD823E00CC3AE7 /* DataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStruct.swift; sourceTree = "<group>"; };
 		D4344EDF342A40337B3F8F9C /* Pods-EzFund.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EzFund.debug.xcconfig"; path = "Target Support Files/Pods-EzFund/Pods-EzFund.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,10 +99,14 @@
 			children = (
 				D3E83B3225BA708A00CC3AE7 /* AppDelegate.swift */,
 				D3E83B4925BA955800CC3AE7 /* PopoverViewController.swift */,
+				D3E83B9825BC730E00CC3AE7 /* BoardViewController.swift */,
+				D3B8D14525BDCBFF0070D1BC /* BoardViewController+DragDrop.swift */,
 				D3E83B5C25BBF31500CC3AE7 /* Logging.swift */,
 				D3E83B5525BAB8FF00CC3AE7 /* Storage.swift */,
+				D3E83BA225BD823E00CC3AE7 /* DataStruct.swift */,
 				D3E83B4C25BA9D5300CC3AE7 /* EventMonitor.swift */,
 				D3E83B4F25BAB59F00CC3AE7 /* ContentView.swift */,
+				D3E83B9525BC6D0E00CC3AE7 /* SearchBar.swift */,
 				D3E83B5925BB378400CC3AE7 /* Extensions.swift */,
 				D3E83B3625BA708C00CC3AE7 /* Assets.xcassets */,
 				D3E83B3B25BA708C00CC3AE7 /* Main.storyboard */,
@@ -229,11 +241,15 @@
 			files = (
 				D3E83B4D25BA9D5300CC3AE7 /* EventMonitor.swift in Sources */,
 				D3E83B5A25BB378400CC3AE7 /* Extensions.swift in Sources */,
+				D3B8D14625BDCBFF0070D1BC /* BoardViewController+DragDrop.swift in Sources */,
 				D3E83B5D25BBF31600CC3AE7 /* Logging.swift in Sources */,
 				D3E83B4A25BA955800CC3AE7 /* PopoverViewController.swift in Sources */,
+				D3E83B9625BC6D0E00CC3AE7 /* SearchBar.swift in Sources */,
 				D3E83B5025BAB59F00CC3AE7 /* ContentView.swift in Sources */,
+				D3E83BA325BD823E00CC3AE7 /* DataStruct.swift in Sources */,
 				D3E83B3325BA708A00CC3AE7 /* AppDelegate.swift in Sources */,
 				D3E83B5625BAB8FF00CC3AE7 /* Storage.swift in Sources */,
+				D3E83B9925BC730E00CC3AE7 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,9 +389,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EzFund/EzFund.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"EzFund/Preview Content\"";
+				DEVELOPMENT_TEAM = 68G6J2P6XH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = EzFund/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,9 +414,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EzFund/EzFund.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"EzFund/Preview Content\"";
+				DEVELOPMENT_TEAM = 68G6J2P6XH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = EzFund/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

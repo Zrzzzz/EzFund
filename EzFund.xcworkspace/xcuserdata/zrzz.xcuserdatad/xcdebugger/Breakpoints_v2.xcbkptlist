@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F6122A22-5679-4861-B23C-CA626331D4E6"
-            shouldBeEnabled = "Yes"
+            uuid = "9FF887FB-8B22-463E-A885-E8BBF1B6E7DE"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EzFund/PopoverViewController.swift"
+            filePath = "EzFund/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "tableView(_:viewFor:row:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "initTimer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EB7C7751-4408-444E-8D44-F76017848EB6"
-            shouldBeEnabled = "No"
+            uuid = "0446DAF9-5B89-4E75-9DFA-9EDBA66CF84D"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EzFund/Extensions.swift"
+            filePath = "EzFund/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "hex(_:)"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "initTimer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
